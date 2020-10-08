@@ -23,5 +23,6 @@ include('./php/connect.php');?>
     <!-- 파라미터 값에 따른 출력 담당 -->
     <?php include('./php/printMain.php');?>
   </div>
+  <!-- 관리자 페이지로 가는 버튼 -->
 </body>
 </html>
