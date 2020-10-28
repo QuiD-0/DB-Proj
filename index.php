@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <?php include('./view/head.php');
 include('./php/connect.php');?>
+<?php session_start(); ?>
 <body>
   <header>
-      <div class="home">
-        HOME
-      </div>
-      <form class="search" method="get">
-        <input type="search" class="searchbox" placeholder="Search" name="search">
-        <button type="submit" class="searchbtn"><i class="fas fa-search"></i></button>
-      </form>
-      <div class="login">
-        <!-- Login 세션 -->
-        <!-- 로그인 되었을때 (닉네임, 장바구니(세션id post), 마이페이지(세션id post), 로그아웃) -->
-        <!-- 로그인 안되었을때 (로그인, 회원가입) -->
-      </div>
-      <div class="buylist">
-        장바구니
+      <div class="top">
+          <div class="home">
+            BookStore
+          </div>
+          <form class="search" method="get">
+            <input type="search" class="searchbox" placeholder="Search" name="search">
+          </form>
+          <div class="login">
+            <!-- Login 세션 -->
+            <?php include('./php/checklogin.php')?>
+          </div>
       </div>
   </header>
   <div class="main_layer">
