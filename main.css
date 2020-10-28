@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a,:visited{
+    color: black;
+}
+header{
+    height: 60px;
+    background-color: lightgray;
+    box-shadow: 0px 4px 30px -20px rgba(0,0,0,0.75);
+}
+div.top{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin: 0 auto;
+    width: 1000px;
+    height: 100%;
+}
+div.home{
+    text-align: center;
+    font-size: 40px;
+    width: 20%;
+    height: 100%;
+    display: inline-block;
+}
+header>div>form{
+    height: 100%;
+}
+header>div>form>input{
+    margin: 15px auto;
+    height: 30px;
+    width: 300px;
+    border: 0px;
+    box-shadow: 
+}
+div.login{
+    width: 20%;
+    height: 100%;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+div.main_layer{
+    width:1300px;
+    margin: 20px auto;
+    height: 800px;
+}
