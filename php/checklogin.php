@@ -2,8 +2,8 @@
 //로그인 안되었을때 (로그인, 회원가입)
 if(!isset($_SESSION['user_id'])){
   $output='
-  <a href="view/login.html" class="login-btn">Log In<i class="fas fa-sign-in-alt"></i></a>
-  <a href="view/register.html" class="login-btn">회원가입<i class="fas fa-sign-in-alt"></i></a>
+  <a href="view/login.html" class="login-btn">Log In</a>
+  <a href="view/register.html" class="login-btn">회원가입</a>
   ';
   echo $output;
 }
