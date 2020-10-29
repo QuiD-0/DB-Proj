@@ -4,6 +4,7 @@
 }
 a,:visited{
     color: black;
+    text-decoration: none;
 }
 header{
     height: 60px;
@@ -27,13 +28,19 @@ div.home{
 }
 header>div>form{
     height: 100%;
+    
 }
 header>div>form>input{
     margin: 15px auto;
     height: 30px;
     width: 300px;
-    border: 0px;
-    box-shadow: 
+    border: 0px; 
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+     line-height: 25px;
+    padding: 8px;
+    outline: none;
 }
 div.login{
     width: 20%;
@@ -47,4 +54,22 @@ div.main_layer{
     width:1300px;
     margin: 20px auto;
     height: 800px;
+    display: flex;
+    justify-content: center;
+}
+div.book-container{
+    width: 165px;
+    height: 330px;
+    margin: 30px;
+}
+div.book-container > a>img{
+    box-shadow: 0px 4px 30px -20px rgba(0,0,0,0.75);
+}
+div.btn-container{
+    display: flex;
+    justify-content: flex-end;
+    
+}
+div.btn{
+margin: 5px;
 }

@@ -7,7 +7,7 @@ include('./php/connect.php');?>
     <header>
         <div class="top">
             <div class="home">
-                BookStore
+                <a href="/">Bookstore</a>
             </div>
             <form class="search" method="get">
                 <input type="search" class="searchbox" placeholder="Search" name="search">
