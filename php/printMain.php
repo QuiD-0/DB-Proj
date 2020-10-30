@@ -21,13 +21,24 @@ if(isset($_GET['detail'])){
 }
 //구매
 if(isset($_GET['buy'])){
-  $key=$_GET['buy'];
-  echo "이름 {$key}";
+  if(!isset($_SESSION['user_id'])){
+    echo "로그인";
+  }
+  else{
+    $key=$_GET['buy'];
+    echo "이름 {$key}";
+  }
 }
 //장바구니
 if(isset($_GET['buscket'])){
-  $key=$_GET['buscket'];
-  echo "이름 {$key}";
+  if(!isset($_SESSION['user_id'])){
+    echo "로그인";
+  }
+  else{
+    $key=$_GET['buscket'];
+    echo "이름 {$key}";
+  }
+
 }
 if(isset($_GET['page'])){
   include('page.php');
