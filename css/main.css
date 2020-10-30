@@ -1,17 +1,21 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-a,:visited{
+
+a,
+:visited {
     color: black;
     text-decoration: none;
 }
-header{
+
+header {
     height: 60px;
     background-color: lightgray;
-    box-shadow: 0px 4px 30px -20px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 30px -20px rgba(0, 0, 0, 0.75);
 }
-div.top{
+
+div.top {
     display: flex;
     justify-content: space-between;
     align-content: center;
@@ -19,57 +23,73 @@ div.top{
     width: 1000px;
     height: 100%;
 }
-div.home{
+
+div.home {
     text-align: center;
     font-size: 40px;
     width: 20%;
     height: 100%;
     display: inline-block;
 }
-header>div>form{
+
+header > div > form {
     height: 100%;
-    
+
 }
-header>div>form>input{
+
+header > div > form > input {
     margin: 15px auto;
     height: 30px;
     width: 300px;
-    border: 0px; 
+    border: 0px;
     border-radius: 6px;
     font-size: 16px;
     font-weight: 500;
-     line-height: 25px;
+    line-height: 25px;
     padding: 8px;
     outline: none;
 }
-div.login{
+
+div.login {
     width: 20%;
     height: 100%;
     font-size: 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
 }
-div.main_layer{
-    width:1300px;
+div.main_layer {
+    width: 1150px;
     margin: 20px auto;
-    height: 800px;
-    display: flex;
-    justify-content: center;
+    height: 750px;
+    text-align: left;
+    
 }
-div.book-container{
+
+div.book-container {
     width: 165px;
     height: 330px;
     margin: 30px;
+    display: inline-block;
+    border-bottom: 1px dashed gray;
 }
-div.book-container > a>img{
-    box-shadow: 0px 4px 30px -20px rgba(0,0,0,0.75);
+
+img.thumnail {
+    height: 250px;
+    width: 165px;
+    box-shadow: 0px 4px 20px 0px rgb(0 0 0 / 24%);
 }
-div.btn-container{
+
+div.btn-container {
     display: flex;
-    justify-content: flex-end;
-    
+    justify-content: center;
 }
-div.btn{
-margin: 5px;
+
+div.btn {
+    margin: 5px;
+}
+
+div.bookname,
+div.autuor {
+    overflow-x: hidden;
 }
