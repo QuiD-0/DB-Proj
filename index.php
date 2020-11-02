@@ -23,6 +23,9 @@ include('./php/connect.php');?>
         <?php include('./php/printMain.php');?>
     </div>
     <!-- 관리자 페이지로 가는 버튼 -->
+    
 </body>
 
 </html>
+
+

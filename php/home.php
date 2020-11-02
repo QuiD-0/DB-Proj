@@ -1,7 +1,7 @@
 <?php
 $sql="SELECT * FROM heroku_8c68daa40504b72.books order by count desc limit 10";
 $result = mysqli_query($conn, $sql);
-echo "<div class='best'></div>";
+echo "<div class='best'>베스트 10</div>";
 while ($row = mysqli_fetch_array($result)) {
   $templet="
   <div class=\"book-container\">

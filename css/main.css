@@ -72,9 +72,13 @@ div.book-container {
     margin: 30px;
     display: inline-block;
     border-bottom: 1px dashed gray;
+    transition: 200ms;
+}
+div.book-container:hover{
+    transform: scale(1.05);
 }
 
-img.thumnail {
+div.book-container img.thumnail {
     height: 250px;
     width: 165px;
     box-shadow: 0px 4px 20px 0px rgb(0 0 0 / 24%);
@@ -85,11 +89,105 @@ div.btn-container {
     justify-content: center;
 }
 
-div.btn {
+div.btn-container div.btn {
     margin: 5px;
 }
 
-div.bookname,
-div.autuor {
+div.btn-container div.bookname,
+div.btn-container div.autuor {
     overflow-x: hidden;
+}
+div.detail{
+    margin: 40px auto;
+    width: 800px;
+    height:auto;
+}
+div.buy-layout{
+    height: 300px;
+    padding-bottom: 50px;
+    border-bottom: 1px dashed black;
+}
+div.buy-layout img{
+    margin: 0px 80px 0px 0px;
+    height: 300px;
+    float: left;
+    box-shadow: 0px 4px 20px 0px rgb(0 0 0 / 50%);
+}
+div.buy-layout div.bookname{
+    font-size: 40px;
+    line-height: 1.3em;
+    color: #333;
+    font-weight: 700;
+    word-break: keep-all;
+    word-wrap: break-word;
+    padding-top: 20px;
+}
+div.buy-layout div.author{
+    font-size: 18px;
+    color: #666;
+    line-height: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 10px;
+}
+div.buy-layout div.price{
+    margin: 80px 0px 30px 0px;
+}
+div.buy-layout div.btn a{
+    border: 1px solid black;
+    margin: 0px 30px 0px 0px;
+    padding: 0px 10px;
+    font-size: 15px;
+    float: right;
+    height: 48px;
+    line-height: 46px;
+    cursor: pointer;
+    border-radius: 7px;
+    transition: 200ms;
+}
+div.buy-layout div.btn a:hover{
+    background-color: black;
+    color: white;
+}
+
+div.description{
+    padding: 30px;
+    font-size: 20px;
+    border-bottom: 1px dashed black;
+}
+div.writecomment{
+    width: 800px;
+    height: 100px;
+     border-bottom: 1px dashed black;
+}
+div.writecomment textarea{
+    margin: 10px 10px;
+    width: 710px;
+    height: 78px;
+    background-color: #f9f9f9
+}
+div.writecomment input{
+    border: 1px solid black;
+    margin: 40px 10px 0px 0px;
+    padding: 0px 10px;
+    font-size: 15px;
+    float: right;
+    height: 48px;
+    line-height: 46px;
+    cursor: pointer;
+    border-radius: 7px;
+    background-color: white;
+}
+div.comment{
+    height: 80px;
+    overflow: hidden;
+    border-bottom: 1px solid lightgray;
+}
+div.comment div.username{
+    padding: 10px;
+    font-weight: 600;
+}
+div.comment div.usercomment{
+    padding: 0px 30px;
+    
 }
