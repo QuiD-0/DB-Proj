@@ -2,9 +2,11 @@
     margin: 0;
     padding: 0;
 }
-span.indent_hidden{
+
+span.indent_hidden {
     display: none;
 }
+
 a,
 :visited {
     color: black;
@@ -60,6 +62,7 @@ div.login {
     justify-content: space-between;
     align-items: center;
 }
+
 div.main_layer {
     width: 1150px;
     margin: 20px auto;
@@ -74,10 +77,6 @@ div.book-container {
     margin: 30px;
     display: inline-block;
     border-bottom: 1px dashed gray;
-    transition: 200ms scale;
-}
-div.book-container:hover{
-    transform: scale(1.05);
 }
 
 div.book-container img.thumnail {
@@ -85,40 +84,56 @@ div.book-container img.thumnail {
     width: 165px;
     box-shadow: 0px 4px 20px 0px rgb(0 0 0 / 24%);
 }
-div.book-container .bookname,div.book-container .author{
+
+div.book-container .bookname,
+div.book-container .author {
     overflow: hidden;
     height: 20px;
 }
+
 div.btn-container {
     display: flex;
     justify-content: center;
 }
 
 div.btn-container div.btn {
-    margin: 5px;
+    padding: 2px;
+    margin: 3px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+div.btn-container div.btn:hover {
+    background-color: black;
+    color: white;
+
 }
 
 div.btn-container div.bookname,
 div.btn-container div.autuor {
     overflow: hidden;
 }
-div.detail{
+
+div.detail {
     margin: 40px auto;
     width: 800px;
-    height:auto;
+    height: auto;
 }
-div.buy-layout{
+
+div.buy-layout {
     height: 300px;
     padding-bottom: 50px;
     border-bottom: 1px dashed black;
 }
-div.buy-layout img{
+
+div.buy-layout img {
     margin: 0px 80px 0px 0px;
     height: 300px;
     float: left;
     box-shadow: 0px 4px 20px 0px rgb(0 0 0 / 50%);
 }
-div.buy-layout div.bookname{
+
+div.buy-layout div.bookname {
     font-size: 40px;
     line-height: 1.3em;
     color: #333;
@@ -127,7 +142,8 @@ div.buy-layout div.bookname{
     word-wrap: break-word;
     padding-top: 20px;
 }
-div.buy-layout div.author{
+
+div.buy-layout div.author {
     font-size: 18px;
     color: #666;
     line-height: 1em;
@@ -137,10 +153,12 @@ div.buy-layout div.author{
     overflow: hidden;
     height: 20px;
 }
-div.buy-layout div.price{
+
+div.buy-layout div.price {
     margin: 80px 0px 30px 0px;
 }
-div.buy-layout div.btn a{
+
+div.buy-layout div.btn a {
     border: 1px solid black;
     margin: 0px 30px 0px 0px;
     padding: 0px 10px;
@@ -152,28 +170,32 @@ div.buy-layout div.btn a{
     border-radius: 7px;
     transition: 200ms;
 }
-div.buy-layout div.btn a:hover{
+
+div.buy-layout div.btn a:hover {
     background-color: black;
     color: white;
 }
 
-div.description{
+div.description {
     padding: 30px;
-    font-size: 20px;
+    font-size: 15px;
     border-bottom: 1px dashed black;
 }
-div.writecomment{
+
+div.writecomment {
     width: 800px;
     height: 100px;
-     border-bottom: 1px dashed black;
+    border-bottom: 1px dashed black;
 }
-div.writecomment textarea{
+
+div.writecomment textarea {
     margin: 10px 10px;
     width: 710px;
     height: 78px;
     background-color: #f9f9f9
 }
-div.writecomment input{
+
+div.writecomment input {
     border: 1px solid black;
     margin: 40px 10px 0px 0px;
     padding: 0px 10px;
@@ -185,16 +207,19 @@ div.writecomment input{
     border-radius: 7px;
     background-color: white;
 }
-div.comment{
+
+div.comment {
     height: 80px;
     overflow: hidden;
     border-bottom: 1px solid lightgray;
 }
-div.comment div.username{
+
+div.comment div.username {
     padding: 10px;
     font-weight: 600;
 }
-div.comment div.usercomment{
+
+div.comment div.usercomment {
     padding: 0px 30px;
 
 }

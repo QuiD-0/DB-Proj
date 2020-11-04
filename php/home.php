@@ -11,7 +11,7 @@ while ($row = mysqli_fetch_array($result)) {
           <em><div class=\"author\">{$row['author']} </div></em>
           <div class=\"btn-container\">
           <div class=\"btn\">{$row['price']}원</div>
-          <a href=\"/?buscket={$row['book_name']}\">
+          <a href=\"/?basket={$row['book_name']}\">
               <div class=\"btn\">담기</div>
           </a>
           <a href=\"/?buy={$row['book_name']}\">

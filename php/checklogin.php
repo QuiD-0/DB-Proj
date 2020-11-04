@@ -13,10 +13,9 @@ else{
   $user_id = $_SESSION['user_id'];
   $user_name = $_SESSION['user_nick'];
   $output="<div class=\"nickname\"> ${user_name}님 </div>
-  <div class=\"bucket\"><i class=\"fas fa-shopping-basket\"></i></div>
-  <div class=\"mypage\"><i class=\"fas fa-user\"></i></div>
-  <div class=\"logout\"><a href=\"./php/logout.php\"><i class=\"fas fa-sign-out-alt\"></i></a></div>
-  ";
+<div class=\"bucket\"><a href=\"./view/basket.php\"><i class=\"fas fa-shopping-basket\"></i></a></div>
+<div class=\"mypage\"><a href=\"./view/mypage.php\"><i class=\"fas fa-user\"></i></a></div>
+<div class=\"logout\"><a href=\"./php/logout.php\"><i class=\"fas fa-sign-out-alt\"></i></a></div>  ";
   echo $output;
 
 }
