@@ -9,7 +9,7 @@ echo " <div class=\"detail\">
          <div class=\"bookname\">{$row[1]}</div>
          <div class=\"author\">저자 : {$row['author']}</div>
          <div class=\"price\">가격 : {$row['price']}원</div>
-         <div class=\"btn\"><a href=\"\">구매</a></div>
+         <div class=\"btn\"><a href=\"?buy={$row[1]}\">구매</a></div>
          <div class=\"btn\"><a href=\"?basket={$row[1]}\">장바구니 담기</a></div>
      </div>
      <div class=\"description\">{$row[3]}</div>
