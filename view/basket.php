@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<?php include('./view/head.php');
-include('./php/connect.php');?>
+<?php include('./head.php');
+include('../php/connect.php');?>
 <?php session_start(); ?>
 
 <body>
@@ -14,14 +14,13 @@ include('./php/connect.php');?>
             </form>
             <div class="login">
                 <!-- Login 세션 -->
-                <?php include('./php/checklogin.php')?>
+                <?php include('../php/checklogin.php')?>
             </div>
         </div>
     </header>
     <div class="main_layer">
-        <!-- 파라미터 값에 따른 출력 담당 -->
-      <?php include('./php/printMain.php');?>
-
+      <!--장바구니 출력-->
+      <?php include('../php/print_bascket.php')?>
     </div>
     <!-- 관리자 페이지로 가는 버튼 -->
 

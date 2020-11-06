@@ -2,8 +2,8 @@
 //로그인 안되었을때 (로그인, 회원가입)
 if(!isset($_SESSION['user_id'])){
   $output='
-  <a href="view/login.html" class="login-btn">Log In<i class="fas fa-sign-in-alt"></i></a>
-  <a href="view/register.html" class="login-btn">회원가입<i class="fas fa-sign-in-alt"></i></a>
+  <a href="view/login.html" class="login-btn">Log In</a>
+  <a href="view/register.html" class="login-btn">회원가입</a>
   ';
   echo $output;
 }
@@ -13,10 +13,9 @@ else{
   $user_id = $_SESSION['user_id'];
   $user_name = $_SESSION['user_nick'];
   $output="<div class=\"nickname\"> ${user_name}님 </div>
-  <div class=\"bucket\"><i class=\"fas fa-shopping-basket\"></i></div>
-  <div class=\"mypage\"><i class=\"fas fa-user\"></i></div>
-  <div class=\"logout\"><a href=\"./php/logout.php\"><i class=\"fas fa-sign-out-alt\"></i></a></div>
-  ";
+<div class=\"bucket\"><a href=\"./view/basket.php\"><i class=\"fas fa-shopping-basket\"></i></a></div>
+<div class=\"mypage\"><a href=\"./view/mypage.php\"><i class=\"fas fa-user\"></i></a></div>
+<div class=\"logout\"><a href=\"./php/logout.php\"><i class=\"fas fa-sign-out-alt\"></i></a></div>  ";
   echo $output;
 
 }
