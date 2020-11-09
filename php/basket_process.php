@@ -13,9 +13,9 @@ else{
   if (!$total){
       $sql="INSERT INTO basket VALUES('$id','$key')";
       mysqli_query($conn, $sql);
-      echo "장바구니에 담았습니다.//css수정";
+      echo "장바구니에 담았습니다.//돌아가기 //css수정";
     }else{
-      echo "이미 장바구니에 있는 책입니다.//css수정";
+      echo "이미 장바구니에 있는 책입니다.//돌아가기 //css수정";
     }
 }
 

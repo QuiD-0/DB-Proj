@@ -8,6 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="https://kit.fontawesome.com/b1e30c76c7.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="func.js"></script>
+    </script>
     <style>
         @font-face {
             font-family: 'RIDIBatang';

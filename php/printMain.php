@@ -7,7 +7,7 @@ if (!isset($_GET['id'])) {
     $_GET['id']="home";
 }
 //home 일때 메인 페이지 10개만
-if ($_GET['id']=='home'&& !isset($_GET['search'])&&!isset($_GET['buy'])&&!isset($_GET['detail'])&&!isset($_GET['basket'])&& !isset($_GET['page'])) {
+if ($_GET['id']=='home'&& !isset($_GET['search'])&&!isset($_GET['buy'])&&!isset($_GET['detail'])&&!isset($_GET['basket'])&& !isset($_GET['page'])&& !isset($_GET['user_basket'])) {
   include('home.php');
 }
 //검색시 출력 (사진, 이름, 가격,자세히보기버튼, 구매버튼, 장바구니버튼,)
@@ -29,5 +29,8 @@ if(isset($_GET['buy'])){
 //더보기 페이지네이션
 if(isset($_GET['page'])){
   include('page.php');
+}
+if(isset($_GET['user_basket'])){
+  include('print_basket.php');
 }
 ?>

@@ -119,12 +119,31 @@ div.btn-container div.btn {
 div.btn-container div.btn:hover {
     background-color: black;
     color: white;
+}
 
+div.btn-container div.price_box {
+    padding: 2px;
+    margin: 5px;
 }
 
 div.btn-container div.bookname,
 div.btn-container div.autuor {
     overflow: hidden;
+}
+
+div.btn-container input.check {
+    margin: 10px 5px;
+    border-radius: 7px;
+}
+
+input.select_buy_btn {
+    display: block;
+    padding: 10px;
+    margin: 0px 30px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: white;
+
 }
 
 div.detail {
@@ -315,7 +334,6 @@ div.checklist form label {
 div.purchase {
     margin: 60px 80px;
     width: 200px;
-
     display: inline-block;
     float: right;
 }
