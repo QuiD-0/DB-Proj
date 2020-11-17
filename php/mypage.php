@@ -29,7 +29,7 @@ $templet="<p class=\"mypage-text\">내 정보</p>
 echo $templet;
 // 구매내역
 echo "<p class=\"mypage-text\">최근 구매 내역 10개</p>";
-echo "<div class=\"buylist\">
+echo "<div class=\"mybuylist\">
     <li>";
 $sql="SELECT * FROM buy inner join books where buy.book_name = books.book_name and user_id ='wodnd' order by buy_time desc limit 10";
 $result = mysqli_query($conn, $sql);

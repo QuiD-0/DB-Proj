@@ -437,42 +437,42 @@ input.update-btn:hover {
 
 }
 
-div.buylist {
+div.mybuylist {
     width: 900px;
     margin: 40px auto;
 }
 
-div.buylist li {
+div.mybuylist li {
     list-style-type: none;
 }
 
-div.buylist ul {
+div.mybuylist ul {
     padding: 20px;
     margin: 10px auto;
     border-bottom: 1px dashed black;
 }
 
-div.buylist img {
+div.mybuylist img {
     height: 200px;
     width: 150px;
     margin: 0px;
 }
 
-div.buylist .buyname {
+div.mybuylist .buyname {
     display: inline-block;
     width: 600px;
     font-size: 30px;
     margin: 30px;
 }
 
-div.buylist .buyauthor {
+div.mybuylist .buyauthor {
     display: inline-block;
     width: 400px;
     font-size: 20px;
     margin: 10px 60px;
 }
 
-div.buylist .buyprice {
+div.mybuylist .buyprice {
     display: inline-block;
     font-size: 20px;
 }
