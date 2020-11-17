@@ -363,3 +363,116 @@ div.checklist form input.purchase-btn {
 div.checklist form input.purchase-btn:hover {
     background-color: green;
 }
+
+li.paging {
+    width: 400px;
+    height: 30px;
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+}
+
+ul {
+    display: inline-block;
+    margin: 2px;
+}
+
+ul a {
+    border: 1px solid black;
+    padding: 5px 10.5px;
+    display: inline-block;
+    border-radius: 3px;
+
+}
+
+ul a:hover {
+    background-color: black;
+    color: white;
+}
+
+p.mypage-text {
+    margin: 10px;
+    font-size: 30px;
+}
+
+div.mypage-container {
+    margin: 10px auto;
+    width: 400px;
+    height: 100%;
+    display: inline-block;
+}
+
+div.mypage-container label {
+    margin: 10px;
+    width: 300px;
+    display: block;
+}
+
+div.mypage-container input {
+    margin: 20px 60px;
+    width: 250px;
+    height: 30px;
+    font-size: 15px;
+    border: 0px;
+    border-bottom: 1px solid gray;
+    background-color: #f9f9f9;
+}
+
+span.remain {
+    margin: 100px 0px 0px;
+}
+
+input.update-btn {
+    width: 70px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid black;
+    margin: 20px;
+    border-radius: 3px;
+}
+
+input.update-btn:hover {
+    background-color: black;
+    color: white;
+
+}
+
+div.buylist {
+    width: 900px;
+    margin: 40px auto;
+}
+
+div.buylist li {
+    list-style-type: none;
+}
+
+div.buylist ul {
+    padding: 20px;
+    margin: 10px auto;
+    border-bottom: 1px dashed black;
+}
+
+div.buylist img {
+    height: 200px;
+    width: 150px;
+    margin: 0px;
+}
+
+div.buylist .buyname {
+    display: inline-block;
+    width: 600px;
+    font-size: 30px;
+    margin: 30px;
+}
+
+div.buylist .buyauthor {
+    display: inline-block;
+    width: 400px;
+    font-size: 20px;
+    margin: 10px 60px;
+}
+
+div.buylist .buyprice {
+    display: inline-block;
+    font-size: 20px;
+}

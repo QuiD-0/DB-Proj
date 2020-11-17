@@ -26,3 +26,11 @@ else{
   alert("한개 이상 선택 해주세요!");
 }
 }
+function alertRedirect(msg){
+     alert(msg);
+     history.back();//해당 주소로 이동하는방법
+   }
+function alertRedirectHome(msg,addr){
+        alert(msg);
+        location.href=addr;
+      }

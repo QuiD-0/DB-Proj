@@ -8,6 +8,7 @@ else{
   $sum=0;
   if($_GET['buy']=="list"){
     $key=$_POST['checkbox'];
+    $price_arr=$_POST['pricebox'];
     echo "<div class=\"buylist\">";
     echo "<p class=\"check\">구매 확인</p>";
     for($i=0;$i<count($key);$i++){
@@ -54,6 +55,7 @@ else{
             </div>";
             for($i=0;$i<count($key);$i++){
               echo "<input type=\"hidden\" name=\"checkbox[]\" value=\"{$key[$i]}\">";
+              echo "<input type=\"hidden\" name=\"pricebox[]\" value=\"{$price_arr[$i]}\">";
             }
             echo "
             <input type=\"hidden\" name=\"all_price\" value=\"$sum\">

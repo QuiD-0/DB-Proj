@@ -19,6 +19,7 @@ while($row = mysqli_fetch_array($result)) {
             <em><div class=\"author\" title=\"{$row['author']}\">{$row['author']} </div></em>
             <div class=\"btn-container\">
             <input type=\"checkbox\" name=\"checkbox[]\" value=\"{$row['book_name']}\" class=\"check\">
+            <input type=\"hidden\" name=\"pricebox[]\" value=\"{$row['price']}\">
             <div class=\"btn\">{$row['price']}원</div>
             <a href=\"/?buy={$row['book_name']}\">
                 <div class=\"btn\">구매</div>
@@ -30,5 +31,6 @@ while($row = mysqli_fetch_array($result)) {
 }
 echo "<input type=\"button\" value=\"선택 구매\" class=\"select_buy_btn\" onclick=\"numcheck()\">";
 echo "</form>";
+
 }
  ?>
