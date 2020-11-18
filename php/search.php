@@ -1,6 +1,6 @@
 <?php
 $key = $_GET['search'];
-$query = "SELECT * FROM books WHERE description OR book_name OR author LIKE '%$key%'";
+$query = "SELECT * FROM books WHERE description LIKE '%$key%' OR book_name LIKE '%$key%' OR author LIKE '%$key%'";
 $result = mysqli_query($conn,$query);
 //검색 결과가 없을경우
 if(mysqli_num_rows($result) == "0"){

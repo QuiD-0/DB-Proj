@@ -4,10 +4,6 @@
     font-family: 'RIDIBatang';
 }
 
-body {
-    background-color: #f9f9f9;
-}
-
 span.indent_hidden {
     display: none;
 }
@@ -21,7 +17,7 @@ a,
 header {
 
     height: 60px;
-    background-color: darkseagreen;
+    background: linear-gradient(to left, #f3c4ca, #cfd0F0);
     box-shadow: 0px 4px 30px -20px rgba(0, 0, 0, 0.75);
 }
 
@@ -90,6 +86,13 @@ div.book-container {
     margin: 30px;
     display: inline-block;
     border-bottom: 1px dashed gray;
+    padding-bottom: 5px;
+}
+
+div.best {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 5px;
 }
 
 div.book-container img.thumnail {
@@ -119,12 +122,31 @@ div.btn-container div.btn {
 div.btn-container div.btn:hover {
     background-color: black;
     color: white;
+}
 
+div.btn-container div.price_box {
+    padding: 2px;
+    margin: 5px;
 }
 
 div.btn-container div.bookname,
 div.btn-container div.autuor {
     overflow: hidden;
+}
+
+div.btn-container input.check {
+    margin: 10px 5px;
+    border-radius: 7px;
+}
+
+input.select_buy_btn {
+    display: block;
+    padding: 10px;
+    margin: 0px 30px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: white;
+
 }
 
 div.detail {
@@ -193,6 +215,10 @@ div.description {
     padding: 30px;
     font-size: 15px;
     border-bottom: 1px dashed black;
+}
+
+div.description img {
+    width: 740px;
 }
 
 div.writecomment {
@@ -283,6 +309,24 @@ div.buylist div.price {
     float: right;
 }
 
+div.emptybasket {
+    padding: 250px;
+    text-align: center;
+}
+
+div.empty {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+i.fa-truck-moving {
+    font-size: 100px;
+    color: gray;
+    margin: 10px 100px;
+
+}
+
 div.checklist {
     margin: 0px auto;
     width: 100%;
@@ -315,7 +359,6 @@ div.checklist form label {
 div.purchase {
     margin: 60px 80px;
     width: 200px;
-
     display: inline-block;
     float: right;
 }
@@ -344,4 +387,118 @@ div.checklist form input.purchase-btn {
 
 div.checklist form input.purchase-btn:hover {
     background-color: green;
+}
+
+li.paging {
+    width: 400px;
+    height: 30px;
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+}
+
+ul {
+    display: inline-block;
+    margin: 2px;
+}
+
+ul a {
+    border: 1px solid black;
+    padding: 5px 10.5px;
+    display: inline-block;
+    border-radius: 3px;
+
+}
+
+ul a:hover {
+    background-color: black;
+    color: white;
+}
+
+p.mypage-text {
+    margin: 10px;
+    font-size: 30px;
+}
+
+div.mypage-container {
+    margin: 10px auto;
+    width: 400px;
+    height: 100%;
+    display: inline-block;
+}
+
+div.mypage-container label {
+    margin: 10px;
+    width: 300px;
+    display: block;
+}
+
+div.mypage-container input {
+    margin: 20px 60px;
+    width: 250px;
+    height: 30px;
+    font-size: 15px;
+    border: 0px;
+    border-bottom: 1px solid gray;
+}
+
+span.remain {
+    margin: 100px 0px 0px;
+}
+
+input.update-btn {
+    width: 70px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid black;
+    margin: 20px;
+    border-radius: 3px;
+}
+
+input.update-btn:hover {
+    background-color: black;
+    color: white;
+
+}
+
+div.mybuylist {
+    width: 900px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+div.mybuylist li {
+    list-style-type: none;
+}
+
+div.mybuylist ul {
+    padding: 20px;
+    margin: 10px auto;
+    border-bottom: 1px dashed black;
+}
+
+div.mybuylist img {
+    height: 200px;
+    width: 150px;
+    margin: 0px;
+    float: left;
+}
+
+div.mybuylist .buyname {
+    display: inline-block;
+    width: 500px;
+    font-size: 30px;
+    margin: 30px;
+}
+
+div.mybuylist .buyauthor {
+    display: inline-block;
+    width: 400px;
+    font-size: 20px;
+    margin: 10px 60px;
+}
+
+div.mybuylist .buyprice {
+    display: inline-block;
+    font-size: 20px;
 }

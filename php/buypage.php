@@ -8,6 +8,7 @@ else{
   $sum=0;
   if($_GET['buy']=="list"){
     $key=$_POST['checkbox'];
+    $price_arr=$_POST['pricebox'];
     echo "<div class=\"buylist\">";
     echo "<p class=\"check\">구매 확인</p>";
     for($i=0;$i<count($key);$i++){
@@ -36,7 +37,7 @@ else{
     echo "</div>
     <div class=\"checklist\">
       <p class=\"checkinfo\">개인 정보 확인</p>
-        <form action=\"./php/buy_process.php\" method=\"post\">
+        <form action=\"./php/buy_process.php\" method=\"post\" name=\"formcheck\">
           <div class=\"info\">
             <label>이름</label>
             <input type=\"text\" name=\"name\" value=\"{$row2['name']}\" placeholder=\"이름\">
@@ -47,20 +48,20 @@ else{
               </div>
               <div class=\"purchase\">
             <div class=\"all_price\">총 금액<br>
-              <div class=\"money\">{$row['price']}</div>원</div>
+              <div class=\"money\">{$sum}</div>원</div>
             <div class=\"my_cash\">
               내 지갑<br>
               <div class=\"money\">{$row2['cash']}</div>원
             </div>";
             for($i=0;$i<count($key);$i++){
-              echo "<input type=\"hidden\" name=\"check_box[]\" value=\"{$key[$i]}\">";
+              echo "<input type=\"hidden\" name=\"checkbox[]\" value=\"{$key[$i]}\">";
+              echo "<input type=\"hidden\" name=\"pricebox[]\" value=\"{$price_arr[$i]}\">";
             }
-
             echo "
             <input type=\"hidden\" name=\"all_price\" value=\"$sum\">
             <input type=\"hidden\" name=\"user_id\" value=\"{$row2['user_id']}\">
             <input type=\"hidden\" name=\"type\" value=\"multi\">
-            <input type=\"submit\" class=\"purchase-btn\" value=\"결제\">
+            <input type=\"button\" onclick=\"check()\" class=\"purchase-btn\" value=\"결제\">
             </div>
         </form>
     </div>";
@@ -73,6 +74,7 @@ else{
   $sql="SELECT * FROM heroku_8c68daa40504b72.books where book_name = '$key'";
   $result = mysqli_query($conn, $sql);
   $row = mysqli_fetch_array($result);
+
   $sql2="SELECT * FROM heroku_8c68daa40504b72.user where user_id = '$id'";
   $result2 = mysqli_query($conn, $sql2);
   $row2 = mysqli_fetch_array($result2);
@@ -90,7 +92,7 @@ else{
   </div>
   <div class=\"checklist\">
     <p class=\"checkinfo\">개인 정보 확인</p>
-      <form action=\"./php/buy_process.php\" method=\"post\">
+      <form action=\"./php/buy_process.php\" method=\"post\" name=\"formcheck\">
         <div class=\"info\">
           <label>이름</label>
           <input type=\"text\" name=\"name\" value=\"{$row2['name']}\" placeholder=\"이름\">
@@ -110,7 +112,7 @@ else{
           <input type=\"hidden\" name=\"all_price\" value=\"{$row['price']}\">
           <input type=\"hidden\" name=\"user_id\" value=\"{$row2['user_id']}\">
           <input type=\"hidden\" name=\"type\" value=\"single\">
-          <input type=\"submit\" class=\"purchase-btn\" value=\"결제\">
+          <input type=\"button\" onclick=\"check()\" class=\"purchase-btn\" value=\"결제\">
           </div>
       </form>
   </div>

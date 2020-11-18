@@ -13,9 +13,10 @@ else{
   if (!$total){
       $sql="INSERT INTO basket VALUES('$id','$key')";
       mysqli_query($conn, $sql);
-      echo "장바구니에 담았습니다.//css수정";
+      echo "<script>alertRedirect(\"장바구니에 담았습니다.\");</script>";
+
     }else{
-      echo "이미 장바구니에 있는 책입니다.//css수정";
+      echo "<script>alertRedirect(\"이미 장바구니에 있는 책 입니다.\");</script>";
     }
 }
 
