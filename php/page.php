@@ -22,10 +22,10 @@ else if($page>$total_page)$page=$total_page;
 
 if ($page==$total_page){
   $last=$total-($page-1)*$articles;
-  $key=$page*10+1;
+  $key=($page-1)*10;
   $query = "SELECT * FROM books order by book_id desc limit $key,$last";
 }else{
-  $key=$page*10+1;
+  $key=($page-1)*10;
   $query = "SELECT * FROM books order by book_id desc limit $key,10";
 }
 $result = mysqli_query($conn,$query);

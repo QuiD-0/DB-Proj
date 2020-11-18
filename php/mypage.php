@@ -28,18 +28,26 @@ $templet="<p class=\"mypage-text\">내 정보</p>
 </form>";
 echo $templet;
 // 구매내역
-echo "<p class=\"mypage-text\">최근 구매 내역 10개</p>";
-echo "<div class=\"mybuylist\">
-    <li>";
-$sql="SELECT * FROM buy inner join books where buy.book_name = books.book_name and user_id ='wodnd' order by buy_time desc limit 10";
+echo "<p class=\"mypage-text\">최근 구매 내역</p>";
+echo "<div class=\"mybuylist\">";
+$sql="SELECT count(user_id) FROM buy where user_id ='$id'";
 $result = mysqli_query($conn, $sql);
-while($row = mysqli_fetch_array($result)){
-echo"<ul><img src=\"{$row['book_cover']}\">
-    <div class=\"buyname\">{$row['book_name']}</div>
-    <div class=\"buyauthor\">{$row['author']}</div>
-    <div class=\"buyprice\">{$row['price']} 원</div>
-</ul>";
+$row = mysqli_fetch_array($result);
+if ($row[0]==0)
+{
+  echo "<i class=\"fas fa-truck-moving\"></i><div class=\"empty\">구매 내역이 없습니다.</div>";
+}else{
+  $sql="SELECT * FROM buy inner join books where buy.book_name = books.book_name and user_id ='$id' order by buy_time desc limit 10";
+  $result = mysqli_query($conn, $sql);
+  echo "<li>";
+  while($row = mysqli_fetch_array($result)){
+  echo"<ul><img src=\"{$row['book_cover']}\">
+      <div class=\"buyname\">{$row['book_name']}</div>
+      <div class=\"buyauthor\">{$row['author']}</div>
+      <div class=\"buyprice\">{$row['price']} 원</div>
+  </ul>";
+  }
+  echo "</li></div>";
 }
 
-echo "</li></div>";
  ?>

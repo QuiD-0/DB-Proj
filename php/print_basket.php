@@ -6,7 +6,7 @@ $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_array($result);
 $total = $row[0];
 if ($total==0){
-echo "장바구니 비어있음 //css추가";
+echo "<div class=\"emptybasket\"><i class=\"fas fa-truck-moving\"></i><div class=\"empty\">장바구니가 비어있습니다.</div><div>";
 }else{
 echo "<form action=\"/?buy=list\" method=\"post\" name=\"num_check\" >";
 $sql="SELECT * FROM basket inner Join books where basket.book_name = books.book_name and user_id='$key'";
