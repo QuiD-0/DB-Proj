@@ -23,7 +23,7 @@ else{
     // 회원 추가 처리
     $sql="INSERT INTO user VALUES('$id','$pw','$nick','$phone',100000,'$addr','$name')";
     mysqli_query($conn,$sql);
-    echo "<script>alertRedirectHome(\"회원가입이 완료 되었습니다.\");</script>";
+    echo "<script>alertRedirectHome(\"회원가입이 완료 되었습니다.\",'$locate');</script>";
   }
 }
 
