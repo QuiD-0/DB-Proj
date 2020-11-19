@@ -1,5 +1,6 @@
 <script type="text/javascript" src="../func.js"></script>
 <?php
+$locate="https://db-bookstore-proj.herokuapp.com/";
 include("./connect.php");
 $id=$_POST['id'];
 $pw=$_POST['pw'];
@@ -17,7 +18,7 @@ if ($row[0]==1){
 }
 else{
   if (strlen($pw)<7){
-    echo "<script>alertRedirect(\"Password 는 7자 이상이여야 합니다.\");</script>";
+    echo "strlen($pw), <script>alertRedirect(\"Password 는 7자 이상이여야 합니다.\");</script>";
   }
   else{
     // 회원 추가 처리
@@ -26,8 +27,4 @@ else{
     echo "<script>alertRedirectHome(\"회원가입이 완료 되었습니다.\",'$locate');</script>";
   }
 }
-
-
-
-
  ?>
