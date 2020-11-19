@@ -1,7 +1,10 @@
-body {
-    background: linear-gradient(to left, #f3c4ca, #cfd0F0);
-    font-family: 'Ubuntu', sans-serif;
+:root {
+    --main-bg-color: rgb(248, 249, 250);
+}
 
+body {
+    background: var(--main-bg-color);
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .main {
@@ -9,7 +12,7 @@ body {
     width: 400px;
     height: 400px;
     margin: 7em auto;
-    border-radius: 1.5em;
+    border-radius: 5px;
     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
     text-align: center;
 }
@@ -26,7 +29,6 @@ body {
 
 .sign {
     padding-top: 40px;
-    color: #5C057A;
     font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
     font-size: 33px;
@@ -74,7 +76,6 @@ form.form1 {
     font-family: 'Ubuntu', sans-serif;
 }
 
-
 .un:focus,
 .pass:focus {
     border: 2px solid rgba(0, 0, 0, 0.38) !important;
@@ -95,7 +96,10 @@ input.btn {
     display: block;
     margin: 10px auto;
     font-size: 13px;
-    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+input.btn:hover {
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.05);
 }
 
 .forgot {

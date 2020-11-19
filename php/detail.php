@@ -15,7 +15,7 @@ echo " <div class=\"detail\">
      <div class=\"description\">{$row[3]}</div>
      <div class=\"writecomment\">
     <form action=\"./php/writecomment.php\" method=\"post\">
-        <textarea name=\"comment\" id=\"comment\"></textarea>
+        <textarea name=\"comment\" id=\"comment\" placeholder=\"댓글 입력\" wrap=\"off\"></textarea>
         <input type=\"hidden\" name=\"bookname\" value=\"{$row[1]}\">";
 if(!isset($_SESSION['user_id'])){
   echo "<input type=\"hidden\" name=\"nickname\" value=\"익명\">";

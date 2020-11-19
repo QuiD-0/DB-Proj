@@ -11,7 +11,7 @@ if(sum<=my){
 }
 }
 //선택 개수 체크
-function numcheck(){
+function numcheck(val){
 var formcheck = document.num_check;
 var check=document.getElementsByClassName('check');
 var i=check.length;
@@ -20,12 +20,14 @@ for (var j=0;j<i;j++){
   if(check[j].checked){count++};
 }
 if(count){
-  formcheck.submit();
+  //formcheck.submit();
+  num_check.action=val;
 }
 else{
   alert("한개 이상 선택 해주세요!");
 }
 }
+//리다이렉트
 function alertRedirect(msg){
      alert(msg);
      history.back();//해당 주소로 이동하는방법

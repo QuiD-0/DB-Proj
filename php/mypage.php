@@ -22,7 +22,7 @@ $templet="<p class=\"mypage-text\">내 정보</p>
     <input type=\"text\" name=\"mypage-addr\" value=\"{$row[5]}\">
     </div>
     <input type=hidden value=\"{$id}\" name=\"user\">
-   <span class=\"remain\">남은 금액 : {$row[4]} 원</span>
+   <div class=\"remain\">남은 금액 : {$row[4]} 원</div>
 
   <input type=\"submit\" class=\"update-btn\" value=\"수정하기\">
 </form>";

@@ -1,7 +1,22 @@
+:root {
+    --main-bg-color: rgb(248, 249, 250);
+    --hover-bg: linear-gradient(to right, #f3c4ca, #cfd0F0);
+    --btn-color: lightcoral;
+}
+
 * {
     margin: 0;
     padding: 0;
     font-family: 'RIDIBatang';
+}
+
+::selection {
+    color: var(--main-bg-color);
+    background-color: var(--btn-color);
+}
+
+body {
+    background: var(--main-bg-color);
 }
 
 span.indent_hidden {
@@ -15,10 +30,8 @@ a,
 }
 
 header {
-
     height: 60px;
-    background: linear-gradient(to left, #f3c4ca, #cfd0F0);
-    box-shadow: 0px 4px 30px -20px rgba(0, 0, 0, 0.75);
+    background: var(--main-bg-color);
 }
 
 div.top {
@@ -31,30 +44,27 @@ div.top {
 }
 
 div.home {
-    font-family: 'BMEULJIRO';
     text-align: center;
-    font-size: 40px;
-    margin: 10px;
+    font-size: 35px;
+    margin: 10px 0px;
     display: inline-block;
+}
 
+div.home a:hover {
+    color: var(--btn-color);
 }
 
 div.top a {
     font-family: 'BMEULJIRO';
-    color: white;
-}
-
-header > div > form {
-    height: 100%;
-
+    color: #505050;
 }
 
 header > div > form > input {
     margin: 15px auto;
-    height: 30px;
-    width: 300px;
+    height: 35px;
+    width: 350px;
     border: 0px;
-    border-radius: 6px;
+    border-radius: 3px;
     font-size: 16px;
     font-weight: 500;
     line-height: 25px;
@@ -63,13 +73,21 @@ header > div > form > input {
 }
 
 div.login {
-    color: white;
-    width: 20%;
-    height: 100%;
+    width: 220px;
+    margin: 10px;
     font-size: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #505050;
+}
+
+div.login a:hover {
+    color: var(--btn-color);
+}
+
+div.nickname {
+    font-family: 'BMEULJIRO';
 }
 
 div.main_layer {
@@ -77,56 +95,78 @@ div.main_layer {
     margin: 20px auto;
     height: 750px;
     text-align: left;
-
 }
 
 div.book-container {
-    width: 165px;
-    height: 330px;
-    margin: 30px;
+    background-color: white;
+    width: 200px;
+    height: 340px;
+    margin: 10px;
     display: inline-block;
-    border-bottom: 1px dashed gray;
     padding-bottom: 5px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 16px 0px;
+    border-radius: 4px;
+    transition: box-shadow 0.15s ease-in 0s, transform 0.15s ease-in 0s;
+}
+
+div.book-container:hover {
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 4px 16px 0px;
+    transform: translateY(-5px);
+}
+
+div.line {
+    width: 940px;
+    height: 1px;
+    background-color: rgb(3, 3, 3);
+    display: inline-block;
+    margin-bottom: 5px;
 }
 
 div.best {
     font-size: 20px;
-    font-weight: 700;
     padding: 5px;
+    display: inline-block;
+
 }
 
 div.book-container img.thumnail {
     height: 250px;
-    width: 165px;
-    box-shadow: 0px 4px 20px 0px rgb(0 0 0 / 24%);
+    width: 200px;
 }
 
 div.book-container .bookname,
 div.book-container .author {
     overflow: hidden;
     height: 20px;
-}
-
-div.btn-container {
-    display: flex;
-    justify-content: center;
+    padding: 4px 10px;
 }
 
 div.btn-container div.btn {
     padding: 2px;
-    margin: 3px;
-    border: 1px solid black;
+    width: 40px;
+    text-align: center;
     border-radius: 3px;
+    display: inline-block;
+    margin: 3px;
+    float: right;
+    color: var(--btn-color);
 }
 
 div.btn-container div.btn:hover {
-    background-color: black;
+    background: var(--hover-bg);
     color: white;
 }
 
 div.btn-container div.price_box {
-    padding: 2px;
-    margin: 5px;
+    padding: 6px;
+    width: 80px;
+    text-align: center;
+    display: inline-block;
+    float: left;
+}
+
+input.check {
+    float: left;
 }
 
 div.btn-container div.bookname,
@@ -139,14 +179,26 @@ div.btn-container input.check {
     border-radius: 7px;
 }
 
-input.select_buy_btn {
+div.btn-wrap {
+    width: 300px;
     display: block;
-    padding: 10px;
-    margin: 0px 30px;
-    border: 1px solid black;
-    border-radius: 3px;
-    background-color: white;
+    margin-left: 940px;
+}
 
+input.select_buy_btn {
+    display: inline-block;
+    font-size: 15px;
+    padding: 6px;
+    margin: 0px 10px;
+    border: 0px;
+    border-radius: 4px;
+    background-color: var(--main-bg-color);
+    color: var(--btn-color);
+}
+
+input.select_buy_btn:hover {
+    background: var(--hover-bg);
+    color: white;
 }
 
 div.detail {
@@ -171,7 +223,6 @@ div.buy-layout img {
 div.buy-layout div.bookname {
     font-size: 40px;
     line-height: 1.3em;
-    color: #333;
     font-weight: 700;
     word-break: keep-all;
     word-wrap: break-word;
@@ -183,31 +234,29 @@ div.buy-layout div.author {
     color: #666;
     line-height: 1em;
     font-weight: 700;
-    cursor: pointer;
     padding: 10px;
     overflow: hidden;
     height: 20px;
 }
 
 div.buy-layout div.price {
-    margin: 80px 0px 30px 0px;
+    margin: 50px 0px 30px 0px;
 }
 
 div.buy-layout div.btn a {
-    border: 1px solid black;
     margin: 0px 30px 0px 0px;
     padding: 0px 10px;
     font-size: 15px;
     float: right;
-    height: 48px;
+    height: 45px;
     line-height: 46px;
     cursor: pointer;
-    border-radius: 7px;
-    transition: 200ms;
+    border-radius: 3px;
+    color: var(--btn-color);
 }
 
 div.buy-layout div.btn a:hover {
-    background-color: black;
+    background: var(--hover-bg);
     color: white;
 }
 
@@ -231,20 +280,29 @@ div.writecomment textarea {
     margin: 10px 10px;
     width: 710px;
     height: 78px;
-    background-color: #f9f9f9
+    background: var(--main-bg-color);
+    resize: none;
+    overflow: auto;
+    border: 0px;
 }
 
 div.writecomment input {
-    border: 1px solid black;
-    margin: 40px 10px 0px 0px;
+    border: 0px;
+    margin: 25px 10px 0px 0px;
     padding: 0px 10px;
     font-size: 15px;
     float: right;
     height: 48px;
     line-height: 46px;
     cursor: pointer;
-    border-radius: 7px;
-    background-color: white;
+    border-radius: 4px;
+    background-color: var(--main-bg-color);
+    color: var(--btn-color);
+}
+
+div.writecomment input:hover {
+    background: var(--hover-bg);
+    color: white;
 }
 
 div.comment {
@@ -280,12 +338,9 @@ div.buylist img {
     width: 200px;
     float: left;
     margin: 0px 50px;
-    transition: box-shadow 200ms ease-in-out
+    box-shadow: 0px 4px 30px 0px rgb(0 0 0 / 15%);
 }
 
-div.buylist img:hover {
-    box-shadow: 0px 4px 20px 0px rgb(0 0 0 / 35%);
-}
 
 div.buylist div.bookname {
     display: inline-block;
@@ -327,8 +382,14 @@ i.fa-truck-moving {
 
 }
 
+i.fa-search {
+    font-size: 100px;
+    color: gray;
+    margin: 10px 100px;
+}
+
 div.checklist {
-    margin: 0px auto;
+    margin: 10px auto;
     width: 100%;
 }
 
@@ -343,8 +404,8 @@ div.checklist form input {
     width: 200px;
     height: 20px;
     border: 0px;
-    box-shadow: 0px 4px 20px 0px rgb(0 0 0 / 15%);
-    border-radius: 5px;
+    border-bottom: 1px solid black;
+    background-color: var(--main-bg-color);
 }
 
 div.checklist form input.addr {
@@ -379,14 +440,16 @@ div.checklist form input.purchase-btn {
     width: 100px;
     height: 40px;
     padding: 10px;
-    background-color: palegreen;
+    background-color: var(--main-bg-color);
     margin: 0px 0px 0px 40px;
-    border: 1px solid green;
-    transition: 300ms background;
+    border: 0px;
+    border-radius: 3px;
+    color: var(--btn-color);
 }
 
 div.checklist form input.purchase-btn:hover {
-    background-color: green;
+    background: var(--hover-bg);
+    color: white;
 }
 
 li.paging {
@@ -403,7 +466,6 @@ ul {
 }
 
 ul a {
-    border: 1px solid black;
     padding: 5px 10.5px;
     display: inline-block;
     border-radius: 3px;
@@ -411,7 +473,7 @@ ul a {
 }
 
 ul a:hover {
-    background-color: black;
+    background: var(--hover-bg);
     color: white;
 }
 
@@ -439,26 +501,28 @@ div.mypage-container input {
     height: 30px;
     font-size: 15px;
     border: 0px;
+    background-color: var(--main-bg-color);
     border-bottom: 1px solid gray;
 }
 
-span.remain {
-    margin: 100px 0px 0px;
+div.remain {
+    display: inline-block;
 }
 
 input.update-btn {
     width: 70px;
     height: 30px;
-    background-color: white;
-    border: 1px solid black;
+    font-size: 15px;
+    background-color: var(--main-bg-color);
     margin: 20px;
     border-radius: 3px;
+    color: var(--btn-color);
+    border: 0px;
 }
 
 input.update-btn:hover {
-    background-color: black;
+    background: var(--hover-bg);
     color: white;
-
 }
 
 div.mybuylist {

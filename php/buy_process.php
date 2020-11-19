@@ -32,7 +32,7 @@ else if($_POST['type']=="multi"){
   $arr = $_POST['checkbox'];
   $price_arr=$_POST['pricebox'];
     // buy에 저장
-  for ($i=1;$i<count($arr);$i++){
+  for ($i=0;$i<count($arr);$i++){
     $sql="INSERT INTO heroku_8c68daa40504b72.buy (buy_time,price,user_id,book_name) VALUES(NOW(),'$price_arr[$i]','$id','$arr[$i]')";
     mysqli_query($conn, $sql);
   }

@@ -10,7 +10,7 @@ include('./php/connect.php');?>
                 <a href="/">Bookstore</a>
             </div>
             <form class="search" method="get">
-                <input type="search" class="searchbox" placeholder="Search" name="search">
+                <input type="search" class="searchbox" placeholder="검색" name="search">
             </form>
             <div class="login">
                 <!-- Login 세션 -->

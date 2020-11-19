@@ -5,11 +5,7 @@ $result = mysqli_query($conn,$query);
 //검색 결과가 없을경우
 if(mysqli_num_rows($result) == "0"){
   $templet="
-  <div class=\"noResultContainer\">
-    <i class=\"fas fa-search\"></i>
-    <div class=\"noResult\">검색 결과가 없습니다.</div>
-    <a href=\"/index.php\" class=\"return\">돌아가기</a>
-  </div>
+  <div class=\"emptybasket\"><i class=\"fas fa-search\"></i><div class=\"empty\">검색결과가 없습니다.</div><div>
   ";
   echo $templet;
 }
@@ -23,8 +19,8 @@ else{
               <b><div class=\"bookname\">{$row['book_name']}</div></b>
               <em><div class=\"author\">{$row['author']} </div></em>
               <div class=\"btn-container\">
-              <div class=\"btn\">{$row['price']}원</div>
-              <a href=\"/?buscket={$row['book_name']}\">
+              <div class=\"price_box\">{$row['price']}원</div>
+              <a href=\"/?basket={$row['book_name']}\">
                   <div class=\"btn\">담기</div>
               </a>
               <a href=\"/?buy={$row['book_name']}\">
