@@ -1,6 +1,6 @@
 <?php
 //managepage의 중앙 부분 출력담당
-$locate='https://db-bookstore-proj.herokuapp.com';
+$locate='https://jus-bookstore.herokuapp.com';
 include('connect.php');
 //id가 없을 경우 id=home으로 세팅
 if (!isset($_GET['id'])) {
