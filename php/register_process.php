@@ -1,6 +1,6 @@
 <script type="text/javascript" src="../func.js"></script>
 <?php
-$locate="https://db-bookstore-proj.herokuapp.com/";
+$locate="https://db-bookstore-proj.herokuapp.com";
 include("./connect.php");
 $id=$_POST['id'];
 $pw=$_POST['pw'];

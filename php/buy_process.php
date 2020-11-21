@@ -1,7 +1,7 @@
 <script type="text/javascript" src="../func.js"></script>
 <?php
 // 1개 일경우
-$locate='https://db-bookstore-proj.herokuapp.com/';
+$locate='https://db-bookstore-proj.herokuapp.com';
 include('connect.php');
 $price = $_POST['all_price'];
 $id = $_POST['user_id'];
