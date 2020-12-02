@@ -9,6 +9,7 @@
     <title>JU's BookStore</title>
     <script src="https://kit.fontawesome.com/b1e30c76c7.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="func.js"></script>
+    <script type="text/javascript" src="https://img.ridicdn.net"></script>
     </script>
     <style>
         @font-face {
